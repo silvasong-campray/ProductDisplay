@@ -65,4 +65,10 @@ public class NapAPorterServiceImpl implements NapAPorterService{
 	    return napAPorterDao.getByGroupBy(value);
 	}
 
+
+	public long getUpdateTime() {
+		// TODO Auto-generated method stub
+		return napAPorterDao.getMaxValue("createtime");
+	}
+
 }

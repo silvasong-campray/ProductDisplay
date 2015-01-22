@@ -195,9 +195,9 @@
 						</div>
 
 						<div class="row">
-							<div class="col-md-4">
+							    <div class="col-md-12">
 								<div class="form-group">
-									<label class="control-label col-md-3">店铺类型</label>
+									<label class="control-label col-md-1">店铺类型</label>
 									<div class="col-md-9">
 										<div class="radio-list">
 											<label class="radio-inline"> <input type="radio"
@@ -211,10 +211,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							
 							<!--/span-->
 
-
+                           </div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
@@ -253,7 +253,7 @@
 								<label class="control-label col-md-3">更新时间</label>
 							        <div class="col-md-9">
 										<p class="form-control-static">
-											22/01/2015 10:31:51
+											<font color="red">${createtime}</font>
 										</p>
 								    </div>
 							   </div>

@@ -15,5 +15,7 @@ public interface NapAPorterService {
 	PagingData loadNapAPorterList(DataTableParamter dtp);
 	
 	List <String> getByGroupBy(String value);
+	
+	long getUpdateTime();
 
 }

@@ -7,7 +7,9 @@
  * @version V1.0   
  */
 package com.product.action;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -63,6 +65,10 @@ public class ProductController extends BaseController {
 		Set<String> categoryOne = new HashSet<String>();
 		categoryOne =SystemConfig.suningCategory.keySet();
 //		List<String> category =suService.getByGroupBy("productCatagory");
+		long createtime = suService.getUpdateTime();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time = sdf.format(new Date(createtime));
+		mav.addObject("createtime",time);
 		mav.addObject("categoryOne", categoryOne);
 		return mav;
 		
@@ -75,6 +81,10 @@ public class ProductController extends BaseController {
 	    ModelAndView mav=new ModelAndView();
 		mav.addObject("category",category);
 		mav.addObject("brand",brand);
+		long createtime = napAPorterService.getUpdateTime();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time = sdf.format(new Date(createtime));
+		mav.addObject("createtime",time);
 		mav.setViewName("product/nat_a_porter");
 		return mav;
 	}

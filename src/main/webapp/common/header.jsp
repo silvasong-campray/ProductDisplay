@@ -42,24 +42,19 @@
 				</li> --%>
 				<!-- END LANGUAGE BAR -->
 				<!-- BEGIN USER LOGIN DROPDOWN -->
-				<%-- <li class="dropdown dropdown-user">
+				 <li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="<%=request.getContextPath()%>/userprofile/getAvatar"/>
 					<span class="username username-hide-on-mobile">
-					${user.adminId} </span>
+					admin </span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
-						<li>
-							<a href="<c:url value="/"/>userprofile">
-							<i class="icon-user"></i> My Profile </a>
-						</li>
 						<li>
 							<a href="<c:url value="/"/>logout">
 							<i class="icon-key"></i> Log Out </a>
 						</li>
 					</ul>
-				</li> --%>
+				</li> 
 				<!-- END USER LOGIN DROPDOWN -->
 			</ul>
 			<!-- END TOP NAVIGATION MENU --> 

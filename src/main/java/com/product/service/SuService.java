@@ -17,5 +17,7 @@ public interface SuService {
 	List <String> getByGroupBy(String value);
 	
 	void cachedData();
+	
+	long getUpdateTime();
 
 }

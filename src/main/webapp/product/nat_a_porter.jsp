@@ -220,8 +220,8 @@
 								<div class="form-group">
 								<label class="control-label col-md-3">更新时间</label>
 							        <div class="col-md-9">
-										<p class="form-control-static">
-											22/01/2015 10:31:51
+										<p class="form-control-static red">
+											<font color="red">${createtime}</font>
 										</p>
 								    </div>
 							   </div>

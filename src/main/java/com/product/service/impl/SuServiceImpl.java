@@ -112,6 +112,11 @@ public class SuServiceImpl implements SuService{
 			}
 		}
 	}
+
+	public long getUpdateTime() {
+		// TODO Auto-generated method stub
+		return suDao.getMaxValue("createtime");
+	}
      
 	
 	
