@@ -47,11 +47,12 @@ var NapAPorter = function() {
 						'class' : 'center'
 					} ],
 					"columns" : [
+                           {
+	                       title : "Category",
+	                       data : "category"
+                            },
 
-							{
-								title : "PID",
-								data : "pid"
-							},
+							
 							{
 								title : "Name",
 								data : "name"
@@ -60,16 +61,16 @@ var NapAPorter = function() {
 								title : "Brand",
 								data : "brand"
 							},
-							{
-								title : "Category",
-								data : "category"
-							},
+							
 
 							{
 								title : "Price",
 								'render' : function(data, type, row) {
 									return "$" + row.price;
 								}
+							},{
+								title : "PID",
+								data : "pid"
 							},
 							{
 								title : "Url",

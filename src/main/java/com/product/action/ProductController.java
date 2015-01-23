@@ -29,6 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.product.commons.SystemConfig;
+import com.product.dto.SuProduct;
 import com.product.model.DataTableParamter;
 import com.product.model.PagingData;
 import com.product.model.SuCategoryModel;

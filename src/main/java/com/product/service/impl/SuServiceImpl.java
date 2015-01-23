@@ -14,6 +14,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.mysql.fabric.xmlrpc.base.Array;
 import com.product.commons.SystemConfig;
 import com.product.dao.SuDao;
+import com.product.dto.SuProduct;
 import com.product.model.DataTableParamter;
 import com.product.model.PagingData;
 import com.product.service.SuService;
@@ -61,16 +62,24 @@ public class SuServiceImpl implements SuService{
 		    }else if(jsonObject.getString("price_to")!=null && !jsonObject.getString("price_to").isEmpty()){
 		    	criterions.add(Restrictions.le("promotionPrice", Float.parseFloat(jsonObject.getString("price_to"))));      
 		    }
+			if(jsonObject.getString("disprice_from")!=null && !jsonObject.getString("disprice_from").isEmpty()&&
+					   jsonObject.getString("disprice_to")!=null && !jsonObject.getString("disprice_to").isEmpty()){
+		        criterions.add(Restrictions.between("disPrice", Float.parseFloat(jsonObject.getString("disprice_from")), Float.parseFloat(jsonObject.getString("disprice_to"))));
+			}else if(jsonObject.getString("disprice_from")!=null && !jsonObject.getString("disprice_from").isEmpty()){
+		        criterions.add(Restrictions.ge("disPrice", Float.parseFloat(jsonObject.getString("disprice_from"))));
+		    }else if(jsonObject.getString("disprice_to")!=null && !jsonObject.getString("disprice_to").isEmpty()){
+		    	criterions.add(Restrictions.le("disPrice", Float.parseFloat(jsonObject.getString("disprice_to"))));      
+		    }
 			
 			Criterion [] criterion = new Criterion[criterions.size()];
 			for(int i=0;i<criterions.size();i++){
 				criterion[i]=criterions.get(i);
 			}
 			
-			return suDao.findPage(criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
+			return suDao.findPage("promotionPrice",false,criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
 			
 		}
-		return suDao.findPage(dtp.getiDisplayStart(), dtp.getiDisplayLength());
+		return suDao.findPage("promotionPrice",false,dtp.getiDisplayStart(), dtp.getiDisplayLength());
 	}
 
 	public List<String> getByGroupBy(String value) {
@@ -116,6 +125,16 @@ public class SuServiceImpl implements SuService{
 	public long getUpdateTime() {
 		// TODO Auto-generated method stub
 		return suDao.getMaxValue("createtime");
+	}
+
+	public List<SuProduct> loadAll() {
+		// TODO Auto-generated method stub
+		return suDao.LoadAll();
+	}
+
+	public void updateSuProduct(SuProduct suProduct) {
+		// TODO Auto-generated method stub
+		suDao.update(suProduct);
 	}
      
 	

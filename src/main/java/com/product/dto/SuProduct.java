@@ -8,6 +8,7 @@ public class SuProduct {
 	private String productLink;
 	private float promotionPrice;
 	private float netPrice;
+	private float disPrice;
 	private String vendorName;
 	private String productCatagory;
 	private String productParam;
@@ -27,7 +28,15 @@ public class SuProduct {
 	public void setId(int id) {
 		this.id = id;
 	}
+    
+	public float getDisPrice() {
+		return disPrice;
+	}
 
+
+	public void setDisPrice(float disPrice) {
+		this.disPrice = disPrice;
+	}
 	
 
 	public String getPartNumber() {

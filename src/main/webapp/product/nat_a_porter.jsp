@@ -34,8 +34,7 @@
 <link href="../assets/global/plugins/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/global/plugins/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/>
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-<link href="../assets/global/plugins/select2/select2.css"
-	rel="stylesheet" type="text/css" />
+
 <link
 	href="../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"
 	rel="stylesheet" type="text/css" />
@@ -96,6 +95,7 @@
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				
 				<li class="sidebar-toggler-wrapper">
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 					<div class="sidebar-toggler">
@@ -107,7 +107,7 @@
 				 <li class="start">
 					<a href="javascript:;">
 					<i class="icon-film"></i>
-					<span class="title">综合类</span>
+					<span class="title">综合类电商网站</span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -123,7 +123,7 @@
 				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-layers"></i>
-					<span class="title">时尚类</span>
+					<span class="title">时尚类电商网站</span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -360,8 +360,7 @@
 	<!-- END CORE PLUGINS -->
 	<script type="text/javascript" src="../assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
-	<script src="../assets/global/plugins/select2/select2.min.js"
-		type="text/javascript"></script>
+	
 	<script
 		src="../assets/global/plugins/datatables/media/js/jquery.dataTables.js"
 		type="text/javascript"></script>

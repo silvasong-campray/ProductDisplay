@@ -54,9 +54,9 @@ public class NapAPorterServiceImpl implements NapAPorterService{
 			for(int i=0 ;i<criterions.size();i++){
 				criterion[i]=criterions.get(i);
 			}
-			return napAPorterDao.findPage(criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
+			return napAPorterDao.findPage("price",false,criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
 		}
-		return napAPorterDao.findPage(dtp.iDisplayStart, dtp.iDisplayLength);
+		return napAPorterDao.findPage("price",false,dtp.iDisplayStart, dtp.iDisplayLength);
 	}
 
 	

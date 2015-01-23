@@ -101,6 +101,7 @@
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+				
 				<li class="sidebar-toggler-wrapper">
 					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 					<div class="sidebar-toggler">
@@ -108,11 +109,10 @@
 					<!-- END SIDEBAR TOGGLER BUTTON -->
 				</li>
 				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-			    
-				 <li class="start active open">
+				<li class="start active open">
 					<a href="javascript:;">
 					<i class="icon-film"></i>
-					<span class="title">综合类</span>
+					<span class="title">综合类电商网站</span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -128,7 +128,7 @@
 				<li class="start ">
 					<a href="javascript:;">
 					<i class="icon-layers"></i>
-					<span class="title">时尚类</span>
+					<span class="title">时尚类电商网站</span>
 					<span class="selected"></span>
 					<span class="arrow open"></span>
 					</a>
@@ -217,10 +217,10 @@
                            </div>
 						</div>
 						<div class="row">
-							<div class="col-md-12">
+							<div class="col-md-4">
 								<div class="form-group">
-									<label class="control-label col-md-1">价格区间</label>
-									<div class="col-md-11">
+									<label class="control-label col-md-3">价格区间</label>
+									<div class="col-md-9">
 										<div class="input-group input-large">
 											<input type="text" class="form-control" name="price_from">
 											<span class="input-group-addon"> to </span> <input
@@ -231,7 +231,19 @@
 								</div>
 							</div>
 							<!--/span-->
+                            <div class="col-md-4">
+								<div class="form-group">
+									<label class="control-label col-md-3">差价区间</label>
+									<div class="col-md-9">
+										<div class="input-group input-large">
+											<input type="text" class="form-control" name="disprice_from">
+											<span class="input-group-addon"> to </span> <input
+												type="text" class="form-control" name="disprice_to">
+										</div>
 
+									</div>
+								</div>
+							</div>
 
 						</div>
 

@@ -2,6 +2,7 @@ package com.product.service;
 
 import java.util.List;
 
+import com.product.dto.SuProduct;
 import com.product.model.DataTableParamter;
 import com.product.model.PagingData;
 
@@ -19,5 +20,9 @@ public interface SuService {
 	void cachedData();
 	
 	long getUpdateTime();
+	
+	List<SuProduct> loadAll();
+	
+	void updateSuProduct(SuProduct suProduct);
 
 }

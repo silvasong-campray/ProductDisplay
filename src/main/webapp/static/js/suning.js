@@ -46,8 +46,8 @@ var Suning = function () {
                 }
             ],
             "columns": [
-               
-	           { title: "PartNumber",   data: "partNumber"  },
+               { title: "Category", data: "productCatagory"},
+	           
 	           { title: "Name",   data: "productName" },
 	           { title: "NetPrice",  'render':function(data,type,row){
 	        	   	return "¥"+row.netPrice;
@@ -56,7 +56,7 @@ var Suning = function () {
 	        	   	return "¥"+row.promotionPrice;
 	           } },
 	           { title: "Vendor",    data: "vendorName" },
-	           { title: "Category", data: "productCatagory"},
+	           { title: "PartNumber",   data: "partNumber"  },
 	           { title: "Url", 'render':function(data,type,row){
 	        	   
                    return '<div class="actions"><a  class="btn btn-sm dark" data-toggle="modal"  href="'+row.productLink+'"  target="_blank">OPEN</a></div>';
@@ -232,6 +232,13 @@ var Suning = function () {
 	            		
 	            	},
 	            	price_to:{
+	            		number:true,
+	            	},
+	            	disprice_from:{
+	            		number:true
+	            		
+	            	},
+	            	disprice_to:{
 	            		number:true,
 	            	}
 	            },
