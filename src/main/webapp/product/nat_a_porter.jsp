@@ -30,6 +30,9 @@
 <link
 	href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"
 	rel="stylesheet" type="text/css" />
+<link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+
 <!-- END GLOBAL MANDATORY STYLES -->
 <link href="../assets/global/plugins/ion.rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
 <link href="../assets/global/plugins/ion.rangeslider/css/ion.rangeSlider.Metronic.css" rel="stylesheet" type="text/css"/>
@@ -66,7 +69,7 @@
 	type="text/css" />
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="../static/img/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="../static/css/image.css" />
+<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -231,8 +234,7 @@
 					</form>
 				</div>
 				<!-- END SEARCH FORM -->
-
-				<div class="row">
+                 <div class="row">
 					<div class="col-md-12">
 						<!-- BEGIN EXAMPLE TABLE PORTLET-->
 						<div class="portlet  box green">
@@ -241,7 +243,9 @@
 									<i class="fa fa-edit"></i>NET-A-PORTER
 								</div>
 								<div class="actions">
+								    <a class="btn btn-default btn-sm" id="price_sort">Price<i class="fa fa-arrow-down"></i></a>
 									<div class="btn-group">
+									    
 										<a class="btn default" href="#" data-toggle="dropdown">
 											Columns <i class="fa fa-angle-down"></i>
 										</a>
@@ -267,7 +271,11 @@
 						<!-- END EXAMPLE TABLE PORTLET-->
 					</div>
 				</div>
-
+				
+							
+				
+				
+				
 				<div class="modal" id="view" tabindex="-1" data-width="760">
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal"
@@ -280,23 +288,31 @@
 								<div class="row">
 									<div class="col-md-6 col-sm-6">
 										<div class="slider"></div>
+										<div class="product-other-images">
+                                            <button class="btn btn-primary" id="download_images">Download Images</button>
+                                        </div>
 									</div>
 									<div class="col-md-6 col-sm-6">
-										<h1></h1>
+									    <div class="price-availability-block clearfix">
+											<a href="" id="copy_n" class="copy">复制</a><div class="name lead"></div>
+										</div>
 										<div class="price-availability-block clearfix">
 											<div class="price">
 												<strong></strong>
 											</div>
 
 										</div>
-										<div class="description">
+										<div class="description" >
+										    <a href="" id="copy_d" class="copy">复制</a>
 											<p></p>
-										</div>
+											</div>
 										<div class="product-page-options">
+										    <a href="" id="copy_b" class="copy">复制</a>
 											<div class="pull-left">
 												<label class="control-label">Brand:</label>
+											    <span></span>	
 											</div>
-											<span></span>
+											
 										</div>
 										<div class="product-page-options">
 											<div class="pull-left">
@@ -305,16 +321,22 @@
 											<div class="pull-left">
 												<label class="control-label">category:</label> <span></span>
 											</div>
-
+                                            
 										</div>
-
+                                       
 
 									</div>
 								</div>
+								
+								
+             
+              
 							</div>
 						</div>
 					</div>
 				</div>
+               
+					 
 			</div>
 		</div>
 		<!-- END CONTENT -->
@@ -359,6 +381,7 @@
 		type="text/javascript"></script>
 	<!-- END CORE PLUGINS -->
 	<script type="text/javascript" src="../assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../assets/global/plugins/zclip/js/jquery.zclip.min.js"></script>
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	
 	<script
@@ -383,7 +406,7 @@
 		type="text/javascript"></script>
 	<script src="../assets/global/plugins/ion.rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>	
     <script type="text/javascript" src="../static/js/yxMobileSlider.js"></script>
-	<script src="../static/js/nat_a_porter.js" type="text/javascript"></script>
+    <script src="../static/js/nat_a_porter.js" type="text/javascript"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script>
 		jQuery(document).ready(function() {
@@ -394,7 +417,8 @@
 
 		});
 	</script>
-	<!-- END JAVASCRIPTS -->
+	
+    <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
 </html>

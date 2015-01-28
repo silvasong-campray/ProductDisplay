@@ -827,6 +827,7 @@ Header and header elements
 }
 .product-other-images {
 	text-align: left;
+	padding-top: 20px;
 }
 .product-other-images img {
 	width: 58px;

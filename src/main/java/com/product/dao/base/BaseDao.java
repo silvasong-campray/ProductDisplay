@@ -209,6 +209,35 @@ public class BaseDao<T> extends HibernateDaoSupport
         return criteria;
     } 
     
+   public Criteria createCriteria(String [] orderBy,boolean [] isAsc){
+    	
+    	
+		 return createCriteria(orderBy,isAsc,new Criterion[]{});
+		
+    }
+   
+   public Criteria createCriteria(String [] orderBy,boolean [] isAsc,Criterion criterions){
+	
+	
+	return createCriteria(orderBy,isAsc,new Criterion[]{criterions});
+	
+   }
+
+    public Criteria createCriteria(String [] orderBy,boolean [] isAsc,Criterion [] criterions){
+    	
+    	Criteria criteria = createCriteria(criterions);
+    	for(int i=0 ;i< orderBy.length;i++){
+    		if(isAsc[i]){
+    			criteria.addOrder(Order.asc(orderBy[i]));
+    		}else{
+    			criteria.addOrder(Order.desc(orderBy[i]));
+    		}
+    	}
+		return criteria;
+		
+    }
+    
+    
     public long getMaxValue(String propertyName){
     	Criteria criteria =createCriteria();  
     	Object res=criteria.setProjection(Projections.max(propertyName)).uniqueResult();
@@ -333,7 +362,19 @@ public class BaseDao<T> extends HibernateDaoSupport
     {
         return findPage(createCriteria(orderBy, isAsc, criterions),startNo, pageSize);
     }
-
+    
+    public PagingData findPage(String orderBy[], boolean isAsc[], int startNo, int pageSize){
+    	return findPage(createCriteria(orderBy, isAsc),startNo, pageSize);
+    }
+    
+    public PagingData findPage(String orderBy[], boolean isAsc[],Criterion[] criterions, int startNo, int pageSize){
+    	return findPage(createCriteria(orderBy, isAsc, criterions),startNo, pageSize);
+    }
+    
+    public PagingData findPage(String orderBy[], boolean isAsc[],Criterion criterions, int startNo, int pageSize){
+    	return findPage(createCriteria(orderBy, isAsc, criterions),startNo, pageSize);
+    }
+    
     public PagingData findPage(final String hql, final int startNo, final int pageSize)
     {
         return findPage(hql, startNo, pageSize, new Object[] {});

@@ -76,10 +76,11 @@ public class SuServiceImpl implements SuService{
 				criterion[i]=criterions.get(i);
 			}
 			
-			return suDao.findPage("promotionPrice",false,criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
+			return suDao.findPage(dtp.getsSortType(), dtp.issSort(),criterion, dtp.getiDisplayStart(), dtp.getiDisplayLength());
 			
 		}
-		return suDao.findPage("promotionPrice",false,dtp.getiDisplayStart(), dtp.getiDisplayLength());
+		
+		    return suDao.findPage(dtp.getsSortType(), dtp.issSort(), dtp.getiDisplayStart(), dtp.getiDisplayLength());
 	}
 
 	public List<String> getByGroupBy(String value) {

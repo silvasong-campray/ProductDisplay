@@ -72,7 +72,7 @@
 	type="text/css" />
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="../static/img/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="../static/css/image.css" />
+<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -285,6 +285,9 @@
 									<i class="fa fa-edit"></i>苏宁
 								</div>
 								<div class="actions">
+								    <a class="btn btn-default btn-sm" id="proprice_sort">ProPrice<i class="fa fa-arrow-down"></i></a>
+								    <a class="btn btn-default btn-sm" id="netprice_sort">NetPrice<i class="fa fa-arrow-down"></i></a>
+								    <a class="btn btn-default btn-sm" id="disprice_sort">DisPrice<i class="fa fa-arrow-down"></i></a>
 									<div class="btn-group">
 										<a class="btn default" href="#" data-toggle="dropdown">
 											Columns <i class="fa fa-angle-down"></i>
@@ -327,7 +330,9 @@
 										<div class="slider"></div>
 									</div>
 									<div class="col-md-6 col-sm-6">
-										<h1></h1>
+										 <div class="price-availability-block clearfix">
+											<a href="" id="copy_n" class="copy">复制</a><div class="name lead"></div>
+										</div>
 										<div class="price-availability-block clearfix">
 											<div class="price">
 												<strong></strong> <em><span></span></em>
@@ -335,10 +340,13 @@
 
 										</div>
 										<div class="product-page-options">
+										    
 											<div class="pull-left">
+											    
 												<label class="control-label">Vendor:</label>
 											</div>
 											<span></span>
+											<a href="" id="copy_b" class="copy">复制</a>
 										</div>
 										<div class="product-page-options">
 											<div class="pull-left">
@@ -349,6 +357,9 @@
 											</div>
 
 										</div>
+										<div class="product-other-images">
+                                            <button class="btn btn-primary" id="download_images">Download Images</button>
+                                        </div>
 									</div>
 
 									<div class="product-page-content">
@@ -357,6 +368,7 @@
 										</ul>
 										<div id="myTabContent" class="tab-content">
 											<div class="tab-pane fade in active " id="Description">
+											    <a href="" id="copy_d" class="copy">复制</a>
 												<p></p>
 											</div>
 											
@@ -416,6 +428,7 @@
 	<!-- END CORE PLUGINS -->
 	<script type="text/javascript"
 		src="../assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="../assets/global/plugins/zclip/js/jquery.zclip.min.js"></script>
 	<!-- BEGIN PAGE LEVEL PLUGINS -->
 	<script src="../assets/global/plugins/select2/js/select2.min.js"
 		type="text/javascript"></script>

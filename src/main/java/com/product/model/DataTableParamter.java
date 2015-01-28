@@ -17,7 +17,11 @@ package com.product.model;
  */
 public class DataTableParamter {
 	
-    // DataTable请求服务器端次数
+    
+
+	
+
+	// DataTable请求服务器端次数
 	public String sEcho;
 	
 	// 过滤条件
@@ -38,9 +42,11 @@ public class DataTableParamter {
 	// 逗号分割所有的列
 	public String sColumns;
 	
-	public String delIds;
-    
-	public String order_id;
+	//排序列
+	public String sSortType;
+	
+	//排序值
+	public boolean sSort;
 	
 	public String getsEcho() {
 		return sEcho;
@@ -97,21 +103,20 @@ public class DataTableParamter {
 	public void setsColumns(String sColumns) {
 		this.sColumns = sColumns;
 	}
-
-	public String getDelIds() {
-		return delIds;
+    
+	public boolean issSort() {
+		return sSort;
 	}
 
-	public void setDelIds(String delIds) {
-		this.delIds = delIds;
+	public void setsSort(boolean sSort) {
+		this.sSort = sSort;
 	}
 	
-	public String getOrder_id() {
-		return order_id;
+	public String getsSortType() {
+		return sSortType;
 	}
 
-	public void setOrder_id(String order_id) {
-		this.order_id = order_id;
+	public void setsSortType(String sSortType) {
+		this.sSortType = sSortType;
 	}
-	
 }
