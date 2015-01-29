@@ -367,9 +367,15 @@
 											<li class="active"><a href="#Description" data-toggle="tab">Description</a></li>
 										</ul>
 										<div id="myTabContent" class="tab-content">
-											<div class="tab-pane fade in active " id="Description">
+											<div class="tab-pane fade in active " >
 											    <a href="" id="copy_d" class="copy">复制</a>
-												<p></p>
+											    <p class="hide" id="des_p"></p>
+												<div class="table-scrollable">
+													<table class="table table-bordered table-hover" id="Description">
+														
+													</table>
+												</div>
+
 											</div>
 											
 											

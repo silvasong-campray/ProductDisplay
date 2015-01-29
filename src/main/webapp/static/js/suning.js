@@ -83,7 +83,16 @@ var Suning = function () {
 			   $('#view').find('.name').text(data.productName);
 	           $('#view').find('.price').find('strong').text("¥"+data.promotionPrice);
 	           $('#view').find('.price').find('span').text("¥"+data.netPrice);
-	           $('#Description').find('p').text(data.productParam);
+	           var descriptions = data.productParam.split("#*#");
+	           var description = [];
+	           var html = '<tbody>';
+	           $.each(descriptions,function(key,value){
+	        	   description = value.split("：");
+	        	   html += '<tr><td>'+description[0]+'</td><td>'+description[1]+'</td></tr>'
+	           });
+	           html +='</tbody>'
+	           $('#Description').html(html);
+	           $('#des_p').text(data.productParam);
 	           $('#view').find('.product-page-options:eq(0)').find('span').text(data.vendorName);
 	           $('#view').find('.product-page-options:eq(1)').find('.pull-left:eq(0)').find('span').text(data.partNumber);
 	           $('#view').find('.product-page-options:eq(1)').find('.pull-left:eq(1)').find('span').text(data.productCatagory);
@@ -298,7 +307,7 @@ var  handleZClip = function(){
 		$("#copy_d").delay(250).queue(function(next){
 	        $(this).zclip({
 	        	path: rootURI+'/assets/global/plugins/zclip/ZeroClipboard.swf',
-				copy: $('#Description').find('p').text(),
+				copy:  $('#des_p').text().replace(/[#*#]/g,"    "),
 				afterCopy: function(){
 				   $('#msg').remove();
 				   $("<span id='msg'/>").insertAfter($('#copy_d')).text('复制成功').fadeOut(2000);
