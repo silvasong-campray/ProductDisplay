@@ -307,7 +307,28 @@ var  handleZClip = function(){
 		$("#copy_d").delay(250).queue(function(next){
 	        $(this).zclip({
 	        	path: rootURI+'/assets/global/plugins/zclip/ZeroClipboard.swf',
-				copy:  $('#des_p').text().replace(/[#*#]/g,"    "),
+				copy:  function(){
+					   var descriptions = $('#des_p').text().split("#*#");
+					   var description = [];
+					   var html = '<table style="width: 602px; height: 350px; text-align: center;" border="0" cellspacing="0" cellpadding="0"><tbody>';
+			           $.each(descriptions,function(key,value){
+			        	   description = value.split("：");
+			        	   if(key % 2 ==0){
+			        		   html += '<tr style="background-color: #ebebeb;">'+
+			        		           '<td style="height: 35px; border: 1px solid #ebebeb;"><p><span style="font-size: small; color: #262626;">'+description[0]+'</p></span></td>'+
+			        		           '<td style="height: 35px; border: 1px solid #ebebeb;"><p><span style="font-size: small; color: #262626;">'+description[1]+'</p></span></td>'+
+			        		           '</tr>';
+			        	   }else{
+			        		   html += '<tr>'+
+	        		           '<td style="height: 35px; border: 1px solid #ebebeb;"><p><span style="font-size: small; color: #262626;">'+description[0]+'</p></span></td>'+
+	        		           '<td style="height: 35px; border: 1px solid #ebebeb;"><p><span style="font-size: small; color: #262626;">'+description[1]+'</p></span></td>'+
+	        		           '</tr>';
+			        	   }
+			        	   
+			           });
+			           html +='</tbody></table>';
+			           return html;
+				},
 				afterCopy: function(){
 				   $('#msg').remove();
 				   $("<span id='msg'/>").insertAfter($('#copy_d')).text('复制成功').fadeOut(2000);
